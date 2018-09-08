@@ -38,6 +38,10 @@ class Graph(numVertices: Int){
     degreeSum.toFloat/this.adjList.size
   }
 
+  def size(): Int = {
+    this.numVertices
+  }
+
   override def toString: String = {
     this.adjList.toString()
   }

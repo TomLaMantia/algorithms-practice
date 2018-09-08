@@ -20,4 +20,19 @@ class dfsPaths {
     this.dfs(g, v)
     this.markedVertices
   }
+
+  def connectedComponents(g: Graph): Map[Int, ArrayBuffer[Int]] ={
+    var connectedComponents = Map[Int, ArrayBuffer[Int]]()
+    val verticesToCover = ArrayBuffer.range(1, g.size())
+
+    var componentNum = 0
+    while (verticesToCover.nonEmpty){
+      val v = verticesToCover(0)
+      val componentVertices = dfsClient(g, v)
+      connectedComponents += (componentNum -> componentVertices)
+      verticesToCover --= componentVertices
+      componentNum += 1
+    }
+    connectedComponents
+  }
 }
