@@ -1,6 +1,6 @@
 package runtime
 
-import graphAPI.Graph, graphAPI.dfsPaths
+import graphAPI.{Graph, dfsPaths, bfsPaths}
 
 object Main extends App{
 
@@ -16,6 +16,10 @@ object Main extends App{
   g.addEdge(3, 4)
 
   val dfsObj = new dfsPaths()
-  dfsObj.dfsClient(g, 0)
+  val dfsOrder = dfsObj.dfsClient(g, 0)
+  print("DFS Traversal " + dfsOrder + "\n")
 
+  val bfsObj = new bfsPaths()
+  val bfsOrder = bfsObj.bfsClient(g, 0)
+  println("BFS Traversal " + bfsOrder)
 }
