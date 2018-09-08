@@ -2,7 +2,7 @@ package graphAPI
 
 import scala.collection.mutable.ArrayBuffer
 
-class dfsPaths {
+class BasicDFS {
 
   var markedVertices: ArrayBuffer[Int] = null
 

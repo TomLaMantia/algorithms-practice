@@ -2,7 +2,7 @@ package graphAPI
 
 import scala.collection.mutable.{Queue, ArrayBuffer}
 
-class bfsPaths {
+class BasicBFS {
 
   var queue : Queue[Int] = null
   var marked : ArrayBuffer[Int] = null
